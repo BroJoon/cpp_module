@@ -10,5 +10,6 @@ int main()
 		zombie = zombieEvent.randomChump();
 		delete zombie;
 	}
+	std::cout << "here" << std::endl;
 	return (0);
 }
