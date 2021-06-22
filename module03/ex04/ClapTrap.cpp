@@ -109,12 +109,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	long long heal = amount;
 	heal = hitPoints + heal > maxHitPoints ? maxHitPoints - hitPoints : heal;
-	if (energyPoints < heal)
-	{
-		std::cout << type << " <" << name << "> can't repaired" << std::endl;
-		return;
-	}
-	energyPoints -= heal;
 	hitPoints += heal;
 	std::cout << type << " <" << name << "> repaired by <" << heal << ">" << std::endl;
 }

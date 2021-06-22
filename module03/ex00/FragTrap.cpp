@@ -88,12 +88,6 @@ void FragTrap::beRepaired(unsigned int amount)
 {
 	long long heal = amount;
 	heal = hitPoints + heal > maxHitPoints ? maxHitPoints - hitPoints : heal;
-	if (energyPoints < heal)
-	{
-		std::cout << "FR4G-TP <" << name << "> can't repaired" << std::endl;
-		return;
-	}
-	energyPoints -= heal;
 	hitPoints += heal;
 	std::cout << "FR4G-TP <" << name << "> repaired by <" << heal << ">" << std::endl;
 }
